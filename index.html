@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course: Caring for Your New Cat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Open Sans', sans-serif; }
+
+    .color-box-bkg { background-color: #f2f2f2 !important; }
+    .helper-text { font-size:12px; color:#6B7280 }
+    img.progress-checkbox { width: 16px; float: left; }
+    img.progress-checkbox-subitem { width: 12px; float: left; }
+
+    summary { list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+
+    h2.text-xl { font-size: 1.75em !important; }
+    .sidebar-w { width: 400px; }
+    a {
+      text-decoration: underline !important;
+      color: #2A4ECC !important;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- Top Nav -->
+  <div class="bg-indigo-700 text-white px-4 py-3 flex items-center justify-between">
+    <button class="text-sm font-medium hover:underline">← Go to Dashboard</button>
+    <h1 class="font-semibold text-white">Course: A Comprehensive Guide to Caring for Your New Cat</h1>
+    <div></div>
+  </div>
+
+  <div class="flex flex-1 overflow-hidden relative">
+    <!-- Left Copy Panel (Initially Hidden) -->
+    <div id="leftCopyPanel" class="sidebar-w bg-indigo-50 p-2 absolute top-0 bottom-0 right-0 z-10 transform translate-x-full transition-transform duration-500 ease-in-out h-screen" >
+
+      <!-- Start here -->
+
+      
+  
+       <!-- Chatbot-->
+       <div class="w-full max-w-md bg-white rounded-xl flex flex-col h-[92%]"style="border: 1px solid rgba(40, 45, 55, 0.1);">
+
+
+        <!-- Header -->
+        <header class="flex items-center gap-3 px-4 py-3 border-b">
+          <img src="img/ta-icon-placeholder.png" alt="Bot Avatar" class="w-8 h-8 rounded-full">
+          <div class="flex gap-2"><h1 class="text-base font-semibold">Teaching Assistant </h1> <img src="img/alpha-badge.svg"></div>
+        </header>
+    
+        <!-- Messages -->
+        <main id="chat" class="flex-1 overflow-y-auto p-4 space-y-4">
+          <!-- Messages inserted here -->
+           
+          <!--initial placeholder-->
+          <div id="messages" class="relative p-4">
+            <!--Messages-->
+            <div id="placeholder" class="text-gray-400 text-center text-sm">
+              <div><img src="img/intro-placeholder.jpg"></div>
+              Hello! I'm your AI Teaching Assistant, here to support course questions about cat care by searching videos, PDFs, and text files. 
+            </div>
+          </div>
+  
+
+        </main>
+    
+        <!-- Input -->
+        <form id="chat-form" class="border-t px-3 pt-4 pb-0 flex flex-col gap-2">
+         
+          <div class="relative w-full">
+            <input id="chat-input" type="text" placeholder="How can I help you today?"
+              class="w-full text-sm pl-3 pr-10 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <button type="submit"
+              class="absolute right-1 top-1/2 transform -translate-y-1/2 bg-[#2A4ECC] hover:bg-[#1336B2] text-white rounded-md flex items-center justify-center">
+              <p class="text-sm pt-1 pb-1 pl-3 pr-3 font-semibold">Send</p>
+            </button>
+          </div>
+        </form>
+
+        <div class="text-xs p-4">
+          <img src="img/info.svg" class="float-left w-5 mr-2">
+          Important content may be inaccurate. Please check sources.
+        </div>
+        
+      </div>
+
+
+
+
+
+      <!--end here-->
+      
+      
+    </div>
+
+    <!-- Content Wrapper -->
+    <div id="contentWrapper" class="flex flex-1 transform transition-transform duration-500 ease-in-out">
+
+      <!-- Sidebar -->
+      <aside class="sidebar-w bg-white border-r overflow-y-auto">
+        <div class="p-6 border-b">
+          <h2 class="text-xl font-semibold leading-tight">A Comprehensive Guide to Caring for Your New Cat</h2>
+          <p class="text-sm text-gray-500 mt-1">0% complete</p>
+        </div>
+        <div class="px-4 pb-4">
+
+  
+
+            <!--Search-->
+
+            <div class="w-full max-w-md mb-4 mt-4">
+              <div class="relative">
+                  <input 
+                      type="text" 
+                      class="w-full px-4 py-2 text-gray-700 bg-white border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 pr-10" 
+                      placeholder="Search by lesson title"
+                  >
+                  <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                      <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                  </div>
+              </div>
+          </div>
+  
+
+
+          <!-- Course Outline -->
+          <div>
+            <details open class="mb-2 group">
+              <summary class="font-semibold text-sm cursor-pointer py-2 flex justify-between items-center list-none">
+                <span class="flex items-center gap-2">
+                  <img class="progress-checkbox" src="img/checkbox-blank-circle-svgrepo-com.png">
+                  Course Introduction <span class="text-gray-400">0/1</span>
+                </span>
+                <span class="text-gray-400 transition-transform duration-200 group-open:rotate-180">▼</span>
+              </summary>
+              <ul class="pl-4 space-y-1 text-sm text-gray-700">
+                <li class="flex items-center space-x-2">
+                  <img class="progress-checkbox-subitem mr-2" src="img/checkbox-blank-circle-svgrepo-com.png">
+                  <span>Intro Video</span>
+                </li>
+              </ul>
+            </details>
+
+            <details open class="mb-2 group">
+              <summary class="font-semibold text-sm cursor-pointer py-2 flex justify-between items-center list-none">
+                <span class="flex items-center gap-2">
+                  <img class="progress-checkbox" src="img/checkbox-blank-circle-svgrepo-com.png">
+                  Introduction to Cat Care<span class="text-gray-400">0/5</span>
+                </span>
+                <span class="text-gray-400 transition-transform duration-200 group-open:rotate-180">▼</span>
+              </summary>
+              <ul class="pl-4 space-y-2 text-sm text-gray-700">
+                <li class="flex items-center space-x-2"><span><img class="progress-checkbox-subitem mr-2" src="img/checkbox-blank-circle-svgrepo-com.png">Why Cats Make Great Companions</span></li>
+                <li class="flex items-center space-x-2"><span><img class="progress-checkbox-subitem mr-2" src="img/checkbox-blank-circle-svgrepo-com.png">Understanding Feline Behavior</span></li>
+                <li class="flex items-center space-x-2"><span><img class="progress-checkbox-subitem mr-2" src="img/checkbox-blank-circle-svgrepo-com.png">Choosing the Right Cat for You</span></li>
+                <li class="flex items-center space-x-2"><span><img class="progress-checkbox-subitem mr-2" src="img/checkbox-blank-circle-svgrepo-com.png">Understanding Cat Breeds and Their Needs</span></li>
+              </ul>
+            </details>
+
+            <details class="mb-2 group">
+              <summary class="font-semibold text-sm cursor-pointer py-2 flex justify-between items-center list-none">
+                <span class="flex items-center gap-2">
+                  <img class="progress-checkbox" src="img/checkbox-blank-circle-svgrepo-com.png">
+                  Preparing Your Home <span class="text-gray-400">0/6</span>
+                </span>
+                <span class="text-gray-400 transition-transform duration-200 group-open:rotate-180">▼</span>
+              </summary>
+            </details>
+
+            <details class="mb-2 group">
+              <summary class="font-semibold text-sm cursor-pointer py-2 flex justify-between items-center list-none">
+                <span class="flex items-center gap-2">
+                  <img class="progress-checkbox" src="img/checkbox-blank-circle-svgrepo-com.png">
+                  Feeding & Nutrition <span class="text-gray-400">0/3</span>
+                </span>
+                <span class="text-gray-400 transition-transform duration-200 group-open:rotate-180">▼</span>
+              </summary>
+            </details>
+          </div>
+        </div>
+        <div class="text-center text-xs text-gray-400 py-4 border-t">TEACH ONLINE WITH THINKIFIC</div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-6 overflow-y-auto">
+        <div class="flex items-center mb-4 content-center">
+          <h2 class="text-lg font-semibold">Why Planning is Important</h2>
+          <div class="ml-auto space-x-2">
+            <button  class="text-sm text-white bg-gray-800 rounded px-3 py-1 hover:bg-gray-700">💬 1 Discussion</button>
+            <button id="discussionToggle"  class="text-sm text-[#282d37] bg-[#F6F8FB] rounded px-3 py-1 hover:bg-[#EEF0F5]" style="border: 1px solid rgba(40, 45, 55, 0.5);"><img class="float-left mr-1" style="padding-top: 2px;" src="img/sparkle.svg"> Teaching Assistant </button>
+
+            
+            <img style="padding-top: 4px; float: right;" src="img/ArrowsOutSimple.svg">
+         
+            
+          </div>
+          <div></div>
+        </div>
+        <!-- Video Placeholder -->
+        <div class="aspect-video bg-gray-200 relative overflow-hidden rounded-lg">
+          <img src="img/cat-video-thumbnail.jpg" alt="Video Thumbnail" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white bg-gray-700 bg-opacity-50 rounded-full p-3 cursor-pointer" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-width="2" d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+          <div class="absolute bottom-2 left-2 text-white text-xs bg-black bg-opacity-60 px-2 py-0.5 rounded">2:40</div>
+          <div class="absolute bottom-2 right-2 flex items-center space-x-2 text-white text-xs bg-black bg-opacity-60 px-2 py-0.5 rounded">
+            <span>⚙️</span>
+            <span>🔊</span>
+            <span>⛶</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const discussionToggle = document.getElementById('discussionToggle');
+    const contentWrapper = document.getElementById('contentWrapper');
+    const leftPanel = document.getElementById('leftCopyPanel');
+    const searchResults = document.getElementById('searchResults');
+    const searchInput = document.getElementById('searchInput');
+    const citationContent = document.getElementById('citationContent');
+    const chat = document.getElementById('chat');
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('chat-input');
+    const botReplies = {
+      'how often should i feed my kitten': 'Feed your kitten 3–4 times a day until they are 6 months old. <br> <div class="mt-2"><span class="font-semibold">See lesson:</span> <a href="https://www.example.com/feeding" target="_blank">Taking care of my kitten</a></div>',
+      'what is the best litter for kittens': 'Non-clumping litter is safest for kittens under 3 months old. <br> <div class="mt-2"><span class="font-semibold">See lesson:</span> <a href="https://www.example.com/feeding" target="_blank">Cat care</a></div>',
+      'how to train a kitten to use litter box': 'Place the kitten in the litter box after meals and naps; praise success!<br> <div class="mt-2"><span class="font-semibold">See lesson:</span> <a href="https://www.example.com/feeding" target="_blank">Tranining your cat</a></div>'
+    };
+
+
+    /* panel open and close */
+    let panelOpen = false;
+
+    discussionToggle.addEventListener('click', () => {
+      panelOpen = !panelOpen;
+
+      if (panelOpen) {
+        contentWrapper.classList.add('-translate-x-[400px]');
+        leftPanel.classList.remove('translate-x-full');
+      } else {
+        contentWrapper.classList.remove('-translate-x-[400px]');
+        leftPanel.classList.add('translate-x-full');
+      }
+
+
+    });
+
+    /* end of panel open and close */
+
+
+    /* Time format change*/
+    function formatTime() {
+    const now = new Date();
+    const options = {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+    };
+    return now.toLocaleString(undefined, options);
+  }
+
+    function addMessage(from, text) {
+
+      const placeholder = document.getElementById('messages');
+      if (placeholder) {
+      placeholder.style.display = 'none';
+      }
+
+  const container = document.createElement('div');
+  container.className = 'fade-in items-start flex flex-col';
+
+  if (from === 'user') {
+    // Create a row for the user message
+    const messageRow = document.createElement('div');
+    messageRow.className = 'flex items-start gap-2 justify-start';
+
+    // User avatar image
+    const avatar = document.createElement('img');
+    avatar.src = 'img/user-picture-placeholder.png'; // Change this to your user's avatar image path
+    avatar.alt = 'User Avatar';
+    avatar.className = 'w-[40px] h-[40px] rounded-md'; // 40px x 40px avatar size
+
+    const content = document.createElement('div');
+    content.className = 'flex flex-col';
+
+    // Header row for user name and timestamp
+    const header = document.createElement('div');
+    header.className = 'flex items-center gap-2';
+
+    const name = document.createElement('div');
+    name.className = 'text-sm font-bold text-[#12151A]';
+    name.textContent = 'Emily Davis'; // Static user name
+
+    const time = document.createElement('div');
+    time.className = 'text-xs text-gray-400 mt-1';
+    time.textContent = formatTime();
+
+    header.appendChild(name);
+    header.appendChild(time);
+
+    // User message bubble
+    const bubble = document.createElement('div');
+    bubble.className = 'text-[#12151A] px-0 py-1 rounded-t-xl rounded-bl-xl max-w-full text-sm';
+    bubble.textContent = text;
+
+    // Assemble user message: name/time above message bubble
+    content.appendChild(header);
+    content.appendChild(bubble);
+
+    messageRow.appendChild(avatar);
+    messageRow.appendChild(content);
+    container.appendChild(messageRow);
+  }
+
+  else {
+    // Create a row for the assistant/bot message
+    const messageRow = document.createElement('div');
+    messageRow.className = 'flex items-start gap-2';
+
+    // Bot avatar image
+    const avatar = document.createElement('img');
+    avatar.src = 'img/ta-icon-placeholder.png';
+    avatar.alt = 'Bot Avatar';
+    avatar.className = 'w-[40px] h-[40px] rounded-md'; // 40px x 40px avatar size
+
+    const content = document.createElement('div');
+    content.className = 'flex flex-col';
+
+    // Header row for bot name and timestamp
+    const header = document.createElement('div');
+    header.className = 'flex items-center gap-2';
+
+    const name = document.createElement('div');
+    name.className = 'text-sm font-bold text-[#12151A]';
+    name.textContent = 'Teaching Assistant'; // Change to actual name if dynamic
+
+    const time = document.createElement('div');
+    time.className = 'text-xs text-gray-400 mt-[1px]';
+    time.textContent = formatTime();
+
+    header.appendChild(name);
+    header.appendChild(time);
+
+    // Bot message bubble
+    const bubble = document.createElement('div');
+    bubble.className = 'text-[#12151A] px-0 py-1 rounded-xl max-w-full text-sm';
+    bubble.innerHTML = text;
+
+    // Feedback thumbs icon
+    const thumbs = document.createElement('img');
+    thumbs.src = 'img/thumbs-up-down.png';
+    thumbs.alt = 'Answer Rating';
+    thumbs.className = 'w-10 cursor-pointer mt-1';
+
+    // Assemble bot message: name/time > bubble > thumbs
+    content.appendChild(header);
+    content.appendChild(bubble);
+    content.appendChild(thumbs);
+
+    messageRow.appendChild(avatar);
+    messageRow.appendChild(content);
+    container.appendChild(messageRow);
+  }
+
+  // Append the new message and scroll to bottom
+  chat.appendChild(container);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+
+
+    function botTypingIndicator() {
+      const typing = document.createElement('div');
+      typing.id = 'typing';
+      typing.className = 'flex items-center space-x-2 text-sm text-gray-400 italic fade-in';
+
+      const avatar = document.createElement('img');
+      avatar.src = 'img/ta-icon-placeholder.png';
+      avatar.alt = 'Bot Avatar';
+      avatar.className = 'w-6 h-6 rounded-md';
+
+      const dots = document.createElement('span');
+      dots.className = 'typing-dots';
+      dots.textContent = 'Teaching Assistant is typing';
+
+      typing.appendChild(avatar);
+      typing.appendChild(dots);
+      chat.appendChild(typing);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function removeTypingIndicator() {
+      const typing = document.getElementById('typing');
+      if (typing) typing.remove();
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+
+      addMessage('user', text);
+      input.value = '';
+
+      botTypingIndicator();
+
+      setTimeout(() => {
+        removeTypingIndicator();
+        const normalized = text.toLowerCase().trim().replace(/[?.!]+$/, '');
+        const reply = botReplies[normalized] || "Unfortunately I couldn't find any answer for this topic. Please use the search feature to search for specific courses.";
+        addMessage('bot', reply);
+      }, 1500);
+    });
+
+    const messagesContainer = document.getElementById('messages');
+  const placeholder = document.getElementById('placeholder');
+  const userInput = document.getElementById('chat-input');
+
+userInput.addEventListener('input', () => {
+  if (userInput.value.trim() === '' && messagesContainer.children.length <= 1) {
+    placeholder.style.display = 'block';
+  } else {
+    placeholder.style.display = 'none';
+  }
+});
+
+    
+
+  
+  </script>
+</body>
+</html>
